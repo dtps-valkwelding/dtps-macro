@@ -5,7 +5,7 @@ This is the README for extension "dcm-lang". This extention allows you to enjoy 
 ## Features
 The extension support autocomplete 'snippets' and syntaxhighlighting for the .dcm file extension used for visualizing dtps macro scripts.
 
-![Alt text](images/Highlight.png)
+![highlight example](images/Highlight.png)
 
 ## Requirements
 

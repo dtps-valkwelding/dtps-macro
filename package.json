@@ -50,7 +50,7 @@
     ],
     "repository": {
       "type": "git",
-      "url": "https://atlassian.valkwelding.nl:7990/scm/dtps/dtps-macro.git"
+      "url": "https://github.com/dtps-valkwelding/dtps-macro"
     }
   }
 }
