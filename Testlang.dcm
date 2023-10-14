@@ -1,0 +1,38 @@
+FUNCTION<'functionName'>
+ENDFUNCTION
+
+LOADFUNCTION('functionFromOtherFile')
+    #Some actions or function that can be performed
+UNLOADFUNCTION('functionFromOtherFile')
+
+SETSTR(str_var, 'text')
+
+
+SETSTR(str_val, '123')
+
+val_cnvstr = strtodbl($str_val)
+
+#Force show with 2 decimals behind comma
+BREAKPOINT( "%.2$str_var")
+
+MESSAGEBOX(NONE, OK, result , 'text example' )
+
+LOOP(i = 1; $val_cnvstr<=500 ; i = $i + 1)
+    BREAK
+ENDLOOP
+
+CALLFUNCTION('functionName')
+
+IF(1>=0)THEN
+
+ENDIF
+
+STOP
+
+
+
+
+
+
+
+

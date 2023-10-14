@@ -1,0 +1,56 @@
+{
+  "name": "dcm-lang",
+  "displayName": "dtps-macro",
+  "description": "Syntax highlighting for DTPS macro language",
+  "version": "1.1.1",
+  "icon": "images/DTPS-1x1.png",
+  "publisher": "DTPS",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "macro",
+    "macro language",
+    "dtps",
+    "dtps macro",
+    "valk welding",
+    "dcm",
+    "dcm-lang"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "dcm",
+        "aliases": [
+          "dcm",
+          "dcm"
+        ],
+        "extensions": [
+          ".dcm"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dcm",
+        "scopeName": "source.dcm",
+        "path": "./syntaxes/dcm.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "dcm",
+        "path": "./snippets/dcm.code-snippets"
+      }
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://atlassian.valkwelding.nl:7990/scm/dtps/dtps-macro.git"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+	"ARGUMENT": [
+		{
+			"prefix": "ARGUMENT(argc)",
+			"body": [
+				"ARGUMENT(${1:argc})",
+				"$2"
+			],
+			"description": [
+				"ARGUMENT(argc)",
+				"GET argument count"
+			]
+		},
+		{		
+			"prefix": "ARGUMENT(io, type, variable)",
+			"body": [
+				"ARGUMENT(${1|INOUT,INPUT,OUTPUT|}, ${2|VAR,STR,POSE,VEC,MAT|}, ${3:varname})",
+				"$4"
+			],
+			"description": [
+				"ARGUMENT(io, type, variable)",
+				"",
+				"io:       Select if provided argument is returned",
+				"type:     Argument type",
+				"variable: Name of local variable"
+			]
+		},
+		{		
+			"prefix": "ARGUMENT(io, type, variable, array, base)",
+			"body": [
+				"ARGUMENT(${1|INOUT,INPUT,OUTPUT|}, ${2|VAR,STR,POSE,VEC,MAT|}, ${3:varname}, '${4:\\$len_arr}', ${5:1})",
+				"$6"
+			],
+			"description": [
+				"ARGUMENT(io, type, variable, len_array, val_arrSart)",
+				"",
+				"io:       Select if provided argument is returned",
+				"type:     Argument type",
+				"variable: Name of local variable",
+				"array:    Length of array",
+				"base:     Array start value"
+			]
+		}
+	],
+	"FUNCTION": {
+		"prefix": "FUNCTION",
+		"body": [
+			"FUNCTION<'$1'>",
+			"ENDFUNCTION",
+			"$2"
+		],
+	"description": "Function, needs to be in top of the file" 
+	},
+
+	"LOADFUNCTION": {
+		"prefix": "LOADFUNCTION",
+		"body": [
+			"LOADFUNCTION('$1')",
+			"$2",
+			"UNLOADFUNCTION('$1')"
+		],
+		"description": "LOAD and UNLOAD FUNCTION from other folder"
+	},
+	"MESSAGEBOX": {
+		"prefix": "MESSAGEBOX",
+		"body": [
+			"MESSAGEBOX(${1|NONE, EXCLAMATION, INFORMATION, QUESTION, STOP|}, ${2|OK, OKCANCEL, YESNO, YESNOCANCEL, RETRYCANCEL, ABORTRETRYIGNORE, CANCELTRYCONTINUE|}, ${3:result} ,'$4')",
+			"$5"
+		],
+		"description": [
+			"MESSAGEBOX( icon, button, result, message, [title], [focus])",
+			"",
+			"icon:    String format",
+			"button:  String format",
+			"result:  result of pressed button",
+			"          1 = first button",
+			"          2 = second button, etc.",
+			"message: Specify message)",
+			"title:   Optional; Specify title",
+			"focus:   Optional; Specify number of button to focus on"
+		]
+	}
+}
